@@ -1,6 +1,10 @@
-.DS_Store
-build.log
 build
-npm-debug.log
+build.log
 tmp
-.map
+._*
+.DS_Store
+.settings
+.project
+Makefile
+bin
+AdHoc
