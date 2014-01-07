@@ -1,0 +1,19 @@
+<Alloy>
+	<Collection src="Todo" />
+	<Window title="Tasks">
+		<RightNavButton platform="ios">
+			<Button title="Add" onClick="addTask" id="addButton"></Button>
+		</RightNavButton>
+		<Menu platform="android">
+			<MenuItem title="Add" onClick="addTask" id="addButton"></MenuItem>
+		</Menu>
+		<TableView id="tasks" dataCollection="Todo" dataTransform="transData" dataFilter="filterData">
+			<TableViewRow onClick="doneConfirm" _id="{alloy_id}">
+				<View id="taskWrap">
+					<Label class="taskText" id="task" text="{task}"></Label>
+					<Label class="taskText" id="limitTime" text="{limitTime}"></Label>
+				</View>
+			</TableViewRow>
+		</TableView>
+	</Window>
+</Alloy>

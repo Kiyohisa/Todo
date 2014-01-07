@@ -1,0 +1,10 @@
+<Alloy>
+	<TabGroup onOpen="tabOpen" onFocus="tabFocus">
+		<Tab title="Tasks" id="tasksTab">
+			<Require type="view" src="Tasks"></Require>
+		</Tab>
+		<Tab title="Done" id="doneTab">
+			<Require type="view" src="Done"></Require>
+		</Tab>
+	</TabGroup>
+</Alloy>

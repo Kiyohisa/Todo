@@ -1,0 +1,13 @@
+<Alloy>
+	<Collection src="Todo" />
+	<Window title="Done">
+		<TableView id="done" dataCollection="Todo" dataTransform="transData" dataFilter="filterData">
+			<TableViewRow>
+				<View id="taskWrap">
+					<Label class="taskText" id="task" text="{task}"></Label>
+					<Label class="taskText" id="limitTime" text="{limitTime}"></Label>
+				</View>
+			</TableViewRow>
+		</TableView>
+	</Window>
+</Alloy>
