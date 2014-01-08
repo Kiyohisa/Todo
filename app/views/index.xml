@@ -6,8 +6,5 @@
 		<Tab title="Done" id="doneTab">
 			<Require type="view" src="Done"></Require>
 		</Tab>
-		<Tab title="Setting">
-			
-		</Tab>
 	</TabGroup>
 </Alloy>
