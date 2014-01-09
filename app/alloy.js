@@ -10,3 +10,4 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 Alloy.Collections.Todo = Alloy.createCollection("Todo");
+Alloy.Collections.photo = Alloy.createCollection("photo");
