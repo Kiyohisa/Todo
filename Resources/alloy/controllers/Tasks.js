@@ -1,18 +1,18 @@
 function Controller() {
-    function __alloyId32() {
-        __alloyId32.opts || {};
-        var models = filterData(__alloyId31);
+    function __alloyId35() {
+        __alloyId35.opts || {};
+        var models = filterData(__alloyId34);
         var len = models.length;
         var rows = [];
         for (var i = 0; len > i; i++) {
-            var __alloyId26 = models[i];
-            __alloyId26.__transform = transData(__alloyId26);
-            var __alloyId27 = Ti.UI.createTableViewRow({
-                _id: "undefined" != typeof __alloyId26.__transform["alloy_id"] ? __alloyId26.__transform["alloy_id"] : __alloyId26.get("alloy_id")
+            var __alloyId29 = models[i];
+            __alloyId29.__transform = transData(__alloyId29);
+            var __alloyId30 = Ti.UI.createTableViewRow({
+                _id: "undefined" != typeof __alloyId29.__transform["alloy_id"] ? __alloyId29.__transform["alloy_id"] : __alloyId29.get("alloy_id")
             });
-            rows.push(__alloyId27);
-            doneConfirm ? __alloyId27.addEventListener("click", doneConfirm) : __defers["__alloyId27!click!doneConfirm"] = true;
-            var __alloyId28 = Ti.UI.createView({
+            rows.push(__alloyId30);
+            doneConfirm ? __alloyId30.addEventListener("click", doneConfirm) : __defers["__alloyId30!click!doneConfirm"] = true;
+            var __alloyId31 = Ti.UI.createView({
                 width: Ti.UI.FILL,
                 height: Ti.UI.SIZE,
                 top: "6dp",
@@ -21,8 +21,8 @@ function Controller() {
                 left: "11dp",
                 layout: "horizontal"
             });
-            __alloyId27.add(__alloyId28);
-            var __alloyId29 = Ti.UI.createLabel({
+            __alloyId30.add(__alloyId31);
+            var __alloyId32 = Ti.UI.createLabel({
                 width: Ti.UI.FILL,
                 height: Ti.UI.SIZE,
                 textAlign: "left",
@@ -30,19 +30,19 @@ function Controller() {
                     fontSize: "18sp",
                     fontWeight: "bold"
                 },
-                text: "undefined" != typeof __alloyId26.__transform["task"] ? __alloyId26.__transform["task"] : __alloyId26.get("task")
+                text: "undefined" != typeof __alloyId29.__transform["task"] ? __alloyId29.__transform["task"] : __alloyId29.get("task")
             });
-            __alloyId28.add(__alloyId29);
-            var __alloyId30 = Ti.UI.createLabel({
+            __alloyId31.add(__alloyId32);
+            var __alloyId33 = Ti.UI.createLabel({
                 width: Ti.UI.FILL,
                 height: Ti.UI.SIZE,
                 textAlign: "left",
                 font: {
                     fontSize: "14sp"
                 },
-                text: "undefined" != typeof __alloyId26.__transform["limitTime"] ? __alloyId26.__transform["limitTime"] : __alloyId26.get("limitTime")
+                text: "undefined" != typeof __alloyId29.__transform["limitTime"] ? __alloyId29.__transform["limitTime"] : __alloyId29.get("limitTime")
             });
-            __alloyId28.add(__alloyId30);
+            __alloyId31.add(__alloyId33);
         }
         $.__views.tasks.setData(rows);
     }
@@ -106,17 +106,17 @@ function Controller() {
         id: "tasks"
     });
     $.__views.Tasks.add($.__views.tasks);
-    var __alloyId31 = Alloy.Collections["Todo"] || Todo;
-    __alloyId31.on("fetch destroy change add remove reset", __alloyId32);
+    var __alloyId34 = Alloy.Collections["Todo"] || Todo;
+    __alloyId34.on("fetch destroy change add remove reset", __alloyId35);
     exports.destroy = function() {
-        __alloyId31.off("fetch destroy change add remove reset", __alloyId32);
+        __alloyId34.off("fetch destroy change add remove reset", __alloyId35);
     };
     _.extend($, $.__views);
     $.addTask = addTask;
     var moment = require("alloy/moment");
     var dialogs = require("alloy/dialogs");
     __defers["$.__views.addButton!click!addTask"] && $.__views.addButton.addEventListener("click", addTask);
-    __defers["__alloyId27!click!doneConfirm"] && __alloyId27.addEventListener("click", doneConfirm);
+    __defers["__alloyId30!click!doneConfirm"] && __alloyId30.addEventListener("click", doneConfirm);
     _.extend($, exports);
 }
 
