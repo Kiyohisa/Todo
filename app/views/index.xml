@@ -9,5 +9,8 @@
 		<Tab title="Entry" id="entryTab">
 			<Require type="view" src="Entry"></Require>
 		</Tab>
+		<Tab title="ShowMap" id="showMapTab">
+			<Require type="view" src="ShowMap"></Require>
+		</Tab>		
 	</TabGroup>
 </Alloy>

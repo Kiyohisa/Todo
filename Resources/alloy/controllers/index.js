@@ -49,6 +49,17 @@ function Controller() {
         id: "entryTab"
     });
     $.__views.index.addTab($.__views.entryTab);
+    $.__views.__alloyId24 = Alloy.createController("ShowMap", {
+        id: "__alloyId24"
+    });
+    $.__views.showMapTab = Ti.UI.createTab({
+        window: $.__views.__alloyId24.getViewEx({
+            recurse: true
+        }),
+        title: "ShowMap",
+        id: "showMapTab"
+    });
+    $.__views.index.addTab($.__views.showMapTab);
     $.__views.index && $.addTopLevelView($.__views.index);
     tabOpen ? $.__views.index.addEventListener("open", tabOpen) : __defers["$.__views.index!open!tabOpen"] = true;
     tabFocus ? $.__views.index.addEventListener("focus", tabFocus) : __defers["$.__views.index!focus!tabFocus"] = true;

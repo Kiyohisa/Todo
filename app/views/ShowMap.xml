@@ -1,0 +1,17 @@
+<Alloy>
+	<Window id="map">
+		<!-- Note the ns attribute is used to change the default namespace -->
+		<View id="mapView" ns="Ti.Map" onClick="doClick" onComplete="setRegion"
+			animate="true" regionFit="true" userLocation="true"
+			mapType="Ti.Map.STANDARD_TYPE">
+			
+			<Annotation id="mountainView"
+				latitude="37.390749" longitude="-122.081651"
+				title="Appcelerator Headquarters" subtitle="Moutain View, CA"
+				pincolor="Titanium.Map.ANNOTATION_RED"
+				leftButton="/images/appcelerator_small.png"
+				myid="1">
+				</Annotation>
+		</View>
+	</Window>
+</Alloy>
